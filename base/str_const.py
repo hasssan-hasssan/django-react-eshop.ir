@@ -1,0 +1,1 @@
+BASE_URL="http://django-react-eshop.ir"
