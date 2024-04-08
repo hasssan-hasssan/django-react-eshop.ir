@@ -10,7 +10,7 @@ from django.utils.timezone import make_aware
 
 IDPAY_HEADER = {
     'Content-Type':'application/json',
-    'X-API-KEY': 'cf3b519b-9d70-4717-aa40-532528c37987',
+    'X-API-KEY': '9598e0f8-0338-4e71-8768-1b8c091fd2c0',
     'X-SANDBOX': '1'
 }
 
