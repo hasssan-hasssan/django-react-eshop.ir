@@ -16,7 +16,7 @@ SECRET_KEY = 'cd9d53ef47c4098c0e27082e4a4c87b66e04c87f4daa45bb29ed46656a8118298b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-react-eshop.ir']
+ALLOWED_HOSTS = ['django-react-eshop.ir', 'www.django-react-eshop.ir']
 
 
 # Application definition
