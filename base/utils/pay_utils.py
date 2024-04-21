@@ -3,9 +3,11 @@ import requests, json
 from base.utils.IDPAY_STATUS import IDPAY_STATUS
 from base.models import Idpay, Order
 from base.str_const import BASE_URL
+from base.str_const import BASE_URL
 
 from datetime import datetime, timezone
 from django.utils.timezone import make_aware
+
 
 
 IDPAY_HEADER = {
@@ -22,7 +24,7 @@ def idpayCreatePay(user, order):
         'order_id' : str(order._id),
         'amount': int(order.totalPrice * 10),
         'mail' : user.email,
-        'callback' : 'https://django-react-eshop.liara.run/api/v1/air/result/'
+        'callback' : F'https://{BASE_URL}/api/v1/air/result/'
     }
     
     response = requests.post(
