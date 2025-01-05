@@ -38,7 +38,6 @@ post_save.connect(newUserAlert, sender=User)
 
 
 def newOrderAlert(sender, instance, created, **kwargs):
-    time.sleep(60)
     if created:
         order = instance
         # orderItems = order.orderitem_set.all()
