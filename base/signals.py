@@ -2,7 +2,7 @@ from django.db.models.signals import pre_save,post_save
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.utils import timezone
-
+import logging
 
 
 def updateUser(sender, instance, **kwargs):
