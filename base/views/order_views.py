@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from base.models import Product,Order,OrderItem,ShippingAddress, Idpay
 from base.serializers import OrderSerializer
 from base.utils.pay_utils import idpayCreateDB, idpayUpdateDB, idpayCompleteDB, idpayInquiry, idpayCreatePay, makeInquiryPayResult
+from base.signals import order_created
 
 
 @api_view(['POST'])
