@@ -1,9 +1,9 @@
-import logging
+import logging,time
 from django.db.models.signals import pre_save,post_save
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.utils import timezone
-from base.models import Order
+from base.models import Order,OrderItem
 
 
 def updateUser(sender, instance, **kwargs):
@@ -38,9 +38,11 @@ post_save.connect(newUserAlert, sender=User)
 
 
 def newOrderAlert(sender, instance, created, **kwargs):
+    time.sleep(60)
     if created:
         order = instance
-        orderItems = order.orderitem_set.all()
+        # orderItems = order.orderitem_set.all()
+        orderItems = OrderItem.objects.filter(order=order)
         itemsPrice = sum(item.qty * item.price for item in orderItems)
         
         msg = f"""
