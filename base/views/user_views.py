@@ -107,7 +107,7 @@ def registerUser(request):
         # send activation email to user
         subject = f"E-Shop Activation email"
         body = f"Hi {user.username} welcome to E-Shop.\n Please use below link for active your account! \n\n" \
-            f"http://{BASE_URL}/api/v1/users/verify/{str(token)}/"
+            f"{BASE_URL}/api/v1/users/verify/{str(token)}/"
 
         data = {
             'subject': subject,
@@ -141,7 +141,7 @@ def registerUser(request):
             # send activation email to user
             subject = f"E-Shop Activation email"
             body = f"Hi {user.username} welcome back to E-Shop.\n Please use below link for active your account! \n\n" \
-                f"http://{BASE_URL}/api/v1/users/verify/{str(token)}/"
+                f"{BASE_URL}/api/v1/users/verify/{str(token)}/"
 
             data = {
                 'subject': subject,
